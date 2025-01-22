@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="register.html">Patient Register</a>
+      <a href="doctor-register.html" class="active">Doctor Register</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Doctor Registration</h1>
+    <form id="doctor-register-form">
+      <label for="doctor-name">Full Name</label>
+      <input type="text" id="doctor-name" name="doctor-name" required>
+
+      <label for="doctor-email">Email</label>
+      <input type="email" id="doctor-email" name="doctor-email" required>
+
+      <label for="doctor-phone">Phone Number</label>
+      <input type="text" id="doctor-phone" name="doctor-phone" required>
+
+      <label for="specialization">Specialization</label>
+      <input type="text" id="specialization" name="specialization" required>
+
+      <button type="submit">Register Doctor</button>
+    </form>
+  </main>
+</body>
+</html>

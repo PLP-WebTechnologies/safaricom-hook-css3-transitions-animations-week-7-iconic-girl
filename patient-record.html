@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Mwingi's Health Record</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="patient-header">
+      <h1>Health Record for John Mwingi</h1>
+      <p><strong>Condition:</strong> Type 2 Diabetes</p>
+      <p><strong>Doctor:</strong> Dr. Juma (Agha Khan Hospital)</p>
+    </section>
+
+    <section class="patient-info">
+      <div class="patient-details">
+        <h2>Contact Details</h2>
+        <p><strong>Phone Number:</strong> 0715661679</p>
+        <p><strong>Email:</strong> johnnymwingi@gmail.com</p>
+      </div>
+
+      <div class="patient-records">
+        <h2>Blood Sugar Level Trend</h2>
+        <p>Track your blood sugar levels over the past few months.</p>
+        <canvas id="healthChart" width="400" height="200"></canvas>
+      </div>
+    </section>
+
+    <section class="patient-tips">
+      <h2>Health Tips</h2>
+      <p>Managing Type 2 Diabetes requires attention to diet, exercise, and regular monitoring. Keep track of your blood sugar levels, and consult with your doctor regularly.</p>
+      <button class="tips-btn">Get More Tips</button>
+    </section>
+  </main>
+
+  <script>
+    var ctx = document.getElementById('healthChart').getContext('2d');
+    var healthChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Blood Sugar Level',
+          data: [120, 140, 160, 130, 115, 125],
+          fill: false,
+          borderColor: 'rgba(75, 192, 192, 1)',
+          tension: 0.1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
